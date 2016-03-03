@@ -1,6 +1,6 @@
 # SketchPlugins
 
-We love Sketch here at [Each&Other](http://www.eachandother.com/). Occasionally we'll come across a problem worth writing a plugin for. When we do, you'll find it here.
+We love [Sketch](https://www.sketchapp.com/) here at [Each&Other](http://www.eachandother.com/). Occasionally we'll come across a problem worth writing a plugin for. When we do, you'll find it here.
 
 ## Plugins
 
