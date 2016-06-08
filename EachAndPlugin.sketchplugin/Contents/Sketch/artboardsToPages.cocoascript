@@ -5,28 +5,26 @@
 
 var onRun = function(context) {
 
-  log('Creating pages from artboards...');
+	log('Creating pages from artboards...');
 
-  var doc = context.document
-  var artboards = doc.currentPage().artboards()
+	var doc = context.document
+	var artboards = doc.currentPage().artboards()
 
   //Options for naming the new pages
   var pageNamePrefix = doc.askForUserInput_initialValue("Page name prefix?", "")
   var pageNameSuffix = doc.askForUserInput_initialValue("Page name suffix?", "")
 
   // Set up enumerator for Artboards
-  var loopArtboards = artboards.objectEnumerator(), exportArtboard, imagePath;
-  
+	var loopArtboards = artboards.objectEnumerator(), exportArtboard, imagePath;
+	
   //x is just for ensuring page names are unique
   var x = 1;
-
-  //Loop through art boards and create new page for each of them
-  while (exportArtboard = loopArtboards.nextObject()) {
+	while (exportArtboard = loopArtboards.nextObject()) {
 
     var newPage = doc.addBlankPage()
 
-    // Set the page name - Insert the page after the current one
-    newPage.setName(pageNamePrefix + exportArtboard.name() + pageNameSuffix + ' [' + x++ + ']')
+		// Set the page name - Insert the page after the current one
+		newPage.setName(pageNamePrefix + exportArtboard.name() + pageNameSuffix + ' [' + x++ + ']')
 
     //Make a copy so we don't pin everything on the first page to the top left
     var newArtboard = [exportArtboard copy]
@@ -39,7 +37,7 @@ var onRun = function(context) {
     //Paste the current artboard into the page
     newPage.addLayers([newArtboard])
 
-  }
+	}
 
-  return newPage
+	return newPage
 }

@@ -1,5 +1,5 @@
 {
-  "author" : "Create pages from artboards",
+  "author" : "Conor",
   "commands" : [
     {
       "script" : "artboardsToPages.cocoascript",
@@ -7,11 +7,19 @@
       "shortcut" : "",
       "name" : "Create pages from artboards",
       "identifier" : "artboardsToPages"
+    },
+    {
+      "script" : "copyAllTextOnPage.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Copy all text",
+      "identifier" : "copyAllTextOnPage"
     }
   ],
   "menu" : {
     "items" : [
-      "artboardsToPages"
+      "artboardsToPages",
+      "copyAllTextOnPage"
     ],
     "title" : "Each & Other"
   },
