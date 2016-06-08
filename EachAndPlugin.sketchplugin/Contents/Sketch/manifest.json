@@ -12,7 +12,7 @@
       "script" : "copyAllTextOnPage.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Copy all text",
+      "name" : "Copy all page text as a list",
       "identifier" : "copyAllTextOnPage"
     }
   ],
@@ -25,7 +25,7 @@
   },
   "identifier" : "com.eachandother.artboardsToPages",
   "version" : "1.0",
-  "description" : "Plugin to create a new page for each artboard in the current page. For best results, ensure that the artboards aren't wrapped in a containing master artboard.",
+  "description" : "Plugins to create a new page for each artboard in the current page. For best results, ensure that the artboards aren't wrapped in a containing master artboard.",
   "authorEmail" : "conor.luddy@eachandother.com",
-  "name" : "Each&Other - Create pages from artboards"
+  "name" : "Each&Other - Create pages from artboards, and copy all text from page"
 }

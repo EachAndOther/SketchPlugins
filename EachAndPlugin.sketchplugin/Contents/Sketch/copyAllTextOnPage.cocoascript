@@ -5,25 +5,20 @@
 
 var onRun = function(context) {
 
-  log('Copying all text from page...');
-
   var doc = context.document
   var layers = doc.currentPage().children();
   var pasteBoard = NSPasteboard.generalPasteboard();
 	var loopLayers = layers.objectEnumerator(), layer, imagePath;
   var result = ''
-  var splitter = doc.askForUserInput_initialValue("What will we separate each item with?", "")
 
 	while (layer = loopLayers.nextObject()) {
     if(layer.class() == "MSTextLayer") {
-      result += layer.stringValue() and splitter
+      result += """
+                """ + layer.stringValue() //For line break.
     }
 	}
 
   pasteBoard.clearContents();
   pasteBoard.writeObjects([result]);
-
   [doc showMessage:"All text copied to clipboard."]
-
-	return ''
 }
